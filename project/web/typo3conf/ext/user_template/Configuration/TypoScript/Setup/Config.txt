@@ -17,6 +17,7 @@ config {
     linkVars = L(0-1)
 
     admPanel = 0
+    contentObjectExceptionHandler = 0
 }
 
 
