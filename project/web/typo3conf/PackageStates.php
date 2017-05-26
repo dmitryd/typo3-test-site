@@ -104,6 +104,9 @@ return [
         'user_template' => [
             'packagePath' => 'typo3conf/ext/user_template/',
         ],
+        'vhs' => [
+            'packagePath' => 'typo3conf/ext/vhs/',
+        ],
     ],
     'version' => 5,
 ];

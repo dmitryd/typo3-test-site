@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e789e635cd561ab0bf4737f8e7ea611",
+    "content-hash": "c23c8677adee6a4e5040d6857a35fc1e",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -1356,6 +1356,39 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2017-05-01T14:55:58+00:00"
+        },
+        {
+            "name": "typo3-ter/vhs",
+            "version": "4.2.0",
+            "dist": {
+                "type": "t3x",
+                "url": "https://typo3.org/extensions/repository/download/vhs/4.2.0/t3x/",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "php": ">= 7.0.0, <= 7.1.99",
+                "typo3/cms-core": ">= 7.6.13, <= 8.7.99"
+            },
+            "replace": {
+                "vhs": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "FluidTYPO3\\Vhs\\": "Classes/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "FluidTYPO3 Team",
+                    "email": "claus@namelesscoder.net",
+                    "company": "",
+                    "username": "fluidtypo3"
+                }
+            ],
+            "description": "A collection of ViewHelpers to perform rendering tasks which are not natively supported by Fluid - for example: advanced formatters, math calculators, specialized conditions and Iterator/Array calculators and processors",
+            "time": "2017-04-14T00:17:17+00:00"
         },
         {
             "name": "typo3/class-alias-loader",
