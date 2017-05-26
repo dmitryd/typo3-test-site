@@ -1,7 +1,7 @@
 version: '2'
 services:
   nginx:
-    build: ./nginx
+    build: ./docker/nginx
     ports:
      - "80:80"
     volumes:
@@ -9,17 +9,17 @@ services:
     networks:
      - typo3net
   php:
-    build: ./php
+    build: ./docker/php
     volumes:
      - ./project:/var/www/html
     networks:
      - typo3net
   mysql:
-    build: ./mysql
+    build: ./docker/mysql
     ports:
      - "3306:3306"
     volumes:
-     - ./mysql/data:/var/lib/mysql
+     - ./docker/mysql/data:/var/lib/mysql
     networks:
      - typo3net
 networks:

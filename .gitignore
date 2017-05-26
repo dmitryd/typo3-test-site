@@ -1,4 +1,4 @@
-mysql/data/
+docker/mysql/data/
 project/.idea/
 project/vendor/
 project/web/index.php
