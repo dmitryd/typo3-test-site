@@ -7,3 +7,5 @@ project/web/fileadmin/
 project/web/typo3conf/ext/*
 project/web/typo3temp/
 project/web/uploads/
+
+!project/web/typo3conf/ext/user_template

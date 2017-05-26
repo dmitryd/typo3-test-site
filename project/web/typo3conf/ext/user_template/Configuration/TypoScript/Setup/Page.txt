@@ -1,0 +1,74 @@
+page = PAGE
+page {
+
+	headerData {
+		9999 = FLUIDTEMPLATE
+		9999 {
+			file = EXT:user_template/Resources/Private/Templates/HeaderData/HeaderData.html
+
+            # Add variables here (for example google analytics code)
+			settings {
+			    languageFile = LLL:EXT:user_template/Resources/Private/Language/Frontend.xlf
+			}
+		}
+	}
+
+	1 = LOAD_REGISTER
+	1 {
+
+		backendLayout.cObject = TEXT
+		backendLayout.cObject {
+
+			data = levelfield:-1, backend_layout_next_level, slide
+
+			override.field = backend_layout
+
+			split {
+				token = pagets__
+				1.current = 1
+				1.wrap = |
+			}
+
+			ifEmpty = default
+
+		}
+
+	}
+
+    10 = FLUIDTEMPLATE
+    10 {
+
+		templateName = default
+		templateName.data = register:backendLayout
+
+		layoutRootPaths {
+			10 = EXT:user_template/Resources/Private/Layouts
+		}
+
+		partialRootPaths {
+			10 = EXT:user_template/Resources/Private/Partials
+		}
+
+		templateRootPaths {
+			10 = EXT:user_template/Resources/Private/Templates
+		}
+
+
+
+		variables {
+
+		}
+
+		settings {
+
+			languageFile = LLL:EXT:user_template/Resources/Private/Language/Frontend.xlf
+
+			uid {
+				root = 1
+			}
+
+            backendLayout = TEXT
+            backendLayout.data = register:backendLayout
+		}
+    }
+}

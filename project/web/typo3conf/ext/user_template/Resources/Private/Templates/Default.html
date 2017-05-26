@@ -1,0 +1,18 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="skeleton"/>
+
+<f:section name="main">
+    <div class="col-md-8">
+        <div class="content-wrap">
+            <!--TYPO3SEARCH_begin-->
+            <v:content.render column="0"/>
+            <!--TYPO3SEARCH_end-->
+        </div>
+    </div>
+    <div class="col-md-4">
+        <!--TYPO3SEARCH_begin-->
+        <v:content.render column="2" slide="-1"/>
+        <!--TYPO3SEARCH_end-->
+    </div>
+</f:section>

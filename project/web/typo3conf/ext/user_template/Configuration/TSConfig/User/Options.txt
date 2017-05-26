@@ -1,0 +1,8 @@
+# Default for everyone
+options {
+
+	# Activate system clearCache
+	clearCache {
+		system = 1
+	}
+}
