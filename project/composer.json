@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "DmitryDulepov\\SiteTemplate\\": "web/typo3conf/ext/user_sitetemplate/Classes"
+            "DmitryDulepov\\SiteTemplate\\": "web/typo3conf/ext/user_template/Classes"
         }
     },
     "extra": {
