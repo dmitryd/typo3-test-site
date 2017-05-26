@@ -1,7 +1,7 @@
 <?php
 return [
     'BE' => [
-        'debug' => false,
+        'debug' => true,
         'explicitADmode' => 'explicitAllow',
         'installToolPassword' => '$pbkdf2-sha256$25000$51QlkMaRmla/GG1orZC25Q$sGs.zo5wX55TyNIBJpt6vRGrys8nQ9Xqq9xtf4yxn7E',
         'loginSecurityLevel' => 'rsa',
@@ -29,7 +29,7 @@ return [
         ],
     ],
     'FE' => [
-        'debug' => false,
+        'debug' => true,
         'loginSecurityLevel' => 'rsa',
     ],
     'GFX' => [
@@ -44,36 +44,23 @@ return [
     ],
     'MAIL' => [
         'transport' => 'sendmail',
-        'transport_sendmail_command' => '/usr/sbin/sendmail -t -i ',
+        'transport_sendmail_command' => '/var/www/bin/email2file -t -i ',
         'transport_smtp_encrypt' => '',
         'transport_smtp_password' => '',
         'transport_smtp_server' => '',
         'transport_smtp_username' => '',
     ],
     'SYS' => [
-        'caching' => [
-            'cacheConfigurations' => [
-                'extbase_object' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
-                    'frontend' => 'TYPO3\\CMS\\Core\\Cache\\Frontend\\VariableFrontend',
-                    'groups' => [
-                        'system',
-                    ],
-                    'options' => [
-                        'defaultLifetime' => 0,
-                    ],
-                ],
-            ],
-        ],
+        'clearCacheSystem' => true,
         'devIPmask' => '',
-        'displayErrors' => 0,
+        'displayErrors' => 1,
         'enableDeprecationLog' => false,
         'encryptionKey' => '3360b1a6fb082c7e70566ca3a68da38914f28cb83a506e6174dddbbb867113cbfec7021d621524047ac756253cffe4bf',
         'exceptionalErrors' => 20480,
         'isInitialDatabaseImportDone' => true,
         'isInitialInstallationInProgress' => false,
         'sitename' => 'TYPO3 Extension Test Site',
-        'sqlDebug' => 0,
+        'sqlDebug' => 1,
         'systemLogLevel' => 2,
         'trustedHostsPattern' => '.*',
     ],
