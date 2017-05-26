@@ -5,7 +5,7 @@ server {
 
     index index.html index.htm index.php;
 
-    server_name _ typo3v87 typo3v76 typo3v62;
+    server_name typo3v87.dev ru.typo3v87.dev;
 
     charset utf-8;
 
