@@ -1,0 +1,25 @@
+{
+    "name": "dmitry/typo3-cms-extension-test-installation",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        }
+    ],
+    "require": {
+        "typo3/cms": "^8.0",
+        "dmitryd/typo3-dd-googlesitemap": "dev-development",
+        "dmitryd/typo3-realurl": "dev-development"
+    },
+    "autoload": {
+        "psr-4": {
+            "DmitryDulepov\\SiteTemplate\\": "web/typo3conf/ext/user_sitetemplate/Classes"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": "web"
+        }
+    }
+}

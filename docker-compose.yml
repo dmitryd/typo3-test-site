@@ -1,0 +1,27 @@
+version: '2'
+services:
+  nginx:
+    build: ./nginx
+    ports:
+     - "80:80"
+    volumes:
+     - ./project:/var/www/html
+    networks:
+     - typo3net
+  php:
+    build: ./php
+    volumes:
+     - ./project:/var/www/html
+    networks:
+     - typo3net
+  mysql:
+    build: ./mysql
+    ports:
+     - "3306:3306"
+    volumes:
+     - ./mysql/data:/var/lib/mysql
+    networks:
+     - typo3net
+networks:
+  typo3net:
+    driver: "bridge"
