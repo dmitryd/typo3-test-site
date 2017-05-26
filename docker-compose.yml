@@ -10,6 +10,8 @@ services:
      - typo3net
   php:
     build: ./docker/php
+    environment:
+      XDEBUG_HOST: ${XDEBUG_HOST}
     volumes:
      - ./project:/var/www/html
     networks:

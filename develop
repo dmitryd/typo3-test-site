@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ "`uname`" = "Darwin" ] ; then
+    sudo ifconfig lo0 alias 10.254.254.254
+    export XDEBUG_HOST=10.254.254.254
+else
+    if [ -z "$XDEBUG_HOST" ] ; then
+        echo "You need to set environment variables XDEBUG_HOST to the IP address of your network adapter"
+        exit 1
+    fi
+fi
+
+if [ $# -gt 0 ]; then
+    docker-compose "$@"
+else
+    docker-compose ps
+fi

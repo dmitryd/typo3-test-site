@@ -1,5 +1,7 @@
 FROM debian:stretch
 
+ADD start-container.sh /usr/bin/start-container.sh
+
 RUN apt-get update \
     && apt-get install -y --no-install-recommends --no-install-suggests apt-utils \
     && apt-get install -y --no-install-recommends --no-install-suggests locales curl zip unzip git graphicsmagick patch less ca-certificates \
@@ -11,7 +13,8 @@ RUN apt-get update \
     && apt-get remove -y --purge apt-utils \
 	&& apt-get autoremove -y \
 	&& apt-get clean \
-	&& rm -fR /var/lib/apt/lists/* /tmp/* /var/tmp/*
+	&& rm -fR /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+    && chmod +x /usr/bin/start-container.sh
 
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
@@ -22,4 +25,5 @@ ADD php-fpm.conf /etc/php/7.0/fpm/php-fpm.conf
 ADD www.conf /etc/php/7.0/fpm/pool.d/www.conf
 
 EXPOSE 9000
-CMD ["php-fpm7.0"]
+
+CMD ["start-container.sh"]
