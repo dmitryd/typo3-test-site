@@ -1,0 +1,3 @@
+#!/bin/bash
+./develop down
+./develop up -d --build
