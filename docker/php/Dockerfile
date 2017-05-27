@@ -26,4 +26,7 @@ ADD www.conf /etc/php/7.0/fpm/pool.d/www.conf
 
 EXPOSE 9000
 
+ENV _D_FPM_COMMAND php-fpm7.0
+ENV _D_EXTRA_INI_FILE /etc/php/7.0/fpm/conf.d/extra.ini
+
 CMD ["start-container.sh"]

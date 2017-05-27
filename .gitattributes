@@ -1,0 +1,8 @@
+docker/nginx/Dockerfile merge=ours
+docker/php/Dockerfile merge=ours
+docker/php/php-fpm.conf merge=ours
+project/composer.json merge=ours
+project/composer.lock merge=ours
+project/backup/typo3dev.sql merge=ours
+project/web/typo3conf/LocalConfiguration.php merge=ours
+project/web/typo3conf/PackageStates.php merge=ours

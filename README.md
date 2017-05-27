@@ -24,7 +24,7 @@ This branch uses TYPO3 8.7 LTS.
 ## XDebug configuration
 
 * IDE key is PHPSTORM
-* Site name is `typo3v87.dev`
+* Site name is `typo3v87.dev` (not `typo3v76.dev`!!!)
 * Mappings:
   * `project` to `/var/www/html`
   * `project/web/typo3` to `/var/www/html/vendor/typo3/cms/typo3`
