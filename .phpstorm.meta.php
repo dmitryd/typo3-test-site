@@ -18,8 +18,5 @@ namespace PHPSTORM_META {
         \TYPO3\CMS\Extbase\Object\ObjectManagerInterface::getEmptyObject('') => [
             '' == '@',
         ],
-        \Sozialinfo\SiJobs\Service\CloneService::copy('') => [
-            '' == '@',
-        ],
     ];
 }
