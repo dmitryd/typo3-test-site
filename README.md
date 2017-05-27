@@ -18,8 +18,8 @@ This branch uses TYPO3 7.6 LTS.
  * If you are on Linux, you need to find out the IP address of your computer and `XDEBUG_HOST=192.168.1.33 ./develop up -d`. `192.168.1.33` here is the IP address of the computer.
  * If you are on Windows, you can try Linux way but most likely you are doomed...
 * Import the database using `mysql -u typo3dev -ptypo3dev -P 3306 -h 127.0.0.1 typo3dev < project/backup/typo3dev.sql` to import the database
-* Add `127.0.0.1 typo3v87.dev` line to your `/etc/hosts` (Windows: `C:\Windows\System32\drivers\etc\hosts`)
-* Open `http://typo3v87.dev/` in the browser
+* Add `127.0.0.1 typo3v76.dev` line to your `/etc/hosts` (Windows: `C:\Windows\System32\drivers\etc\hosts`)
+* Open `http://typo3v76.dev/` in the browser
 
 ## XDebug configuration
 
