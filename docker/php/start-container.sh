@@ -3,7 +3,7 @@
 if [ -z "$XDEBUG_HOST" ] ; then
     echo "Warning: XDEBUG_HOST environment variable is not set!" 1>&2
 else
-    sed -i "s/xdebug\.remote_host \=.*/xdebug\.remote_host \= $XDEBUG_HOST/g" /etc/php/7.0/fpm/conf.d/extra.ini
+    sed -i "s/xdebug\.remote_host \=.*/xdebug\.remote_host \= $XDEBUG_HOST/g" ${_D_EXTRA_INI_FILE}
 fi
 
-php-fpm7.0
+${_D_FPM_COMMAND}

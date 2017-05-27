@@ -37,9 +37,8 @@ class IncludeStaticConfiguration {
 	 * @var array
 	 */
 	protected static $includeStaticTemplates = array(
-		'EXT:fluid_styled_content/Configuration/TypoScript/',
+		'EXT:fluid_styled_content/Configuration/TypoScript/Static/',
 		'EXT:fluid_styled_content/Configuration/TypoScript/Styling/',
-		'EXT:gridelements/Configuration/TypoScript/',
 		// Keep last because it modifies standard settings!
 		'EXT:user_template/Configuration/TypoScript/'
 	);

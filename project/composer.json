@@ -7,8 +7,8 @@
         }
     ],
     "require": {
-        "typo3/cms": "^8.0",
-        "typo3-ter/vhs": "^4.",
+        "typo3/cms": "^7.6",
+        "typo3-ter/vhs": "^3.",
         "dmitryd/typo3-dd-googlesitemap": "dev-development",
         "dmitryd/typo3-realurl": "dev-development"
     },

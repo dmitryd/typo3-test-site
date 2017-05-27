@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[ ! -d docker/mysql/data ] && mkdir -p docker/mysql/data
+
 if [ "`uname`" = "Darwin" ] ; then
     sudo ifconfig lo0 alias 10.254.254.254
     export XDEBUG_HOST=10.254.254.254
