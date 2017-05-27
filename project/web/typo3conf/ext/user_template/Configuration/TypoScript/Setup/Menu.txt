@@ -1,0 +1,62 @@
+page.10.variables.menu = HMENU
+page.10.variables.menu {
+
+    1 = TMENU
+    1 {
+        expAll = 1
+        noBlur = 1
+        wrap = <ul class="nav">|</ul>
+
+        NO = 1
+        NO {
+            wrapItemAndSub = <li class="level1">|</li>
+        }
+
+        ACT < .NO
+        ACT {
+            wrapItemAndSub = <li class="level1 active">|</li>
+        }
+
+        IFSUB < .NO
+        IFSUB {
+        }
+
+        ACTIFSUB < .ACT
+        ACTIFSUB {
+        }
+    }
+
+    2 < .1
+    2 {
+        NO {
+            wrapItemAndSub = <li class="level2">|</li>
+        }
+        ACT {
+            wrapItemAndSub = <li class="level2 active">|</li>
+        }
+        IFSUB {
+            wrapItemAndSub = <li class="level2">|</li>
+        }
+        ACTIFSUB {
+            wrapItemAndSub = <li class="level2 active">|</li>
+        }
+    }
+
+    3 < .2
+    3 {
+        NO {
+            wrapItemAndSub = <li class="level3">|</li>
+        }
+        ACT {
+            wrapItemAndSub = <li class="level3 active">|</li>
+        }
+        IFSUB {
+            wrapItemAndSub = <li class="level3">|</li>
+        }
+        ACTIFSUB {
+            wrapItemAndSub = <li class="level3 active">|</li>
+        }
+    }
+
+    wrap = <nav>|</nav>
+}

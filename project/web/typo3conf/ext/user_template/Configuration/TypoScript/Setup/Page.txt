@@ -56,7 +56,11 @@ page {
 
 
 		variables {
+			languageId = TEXT
+			languageId.data = TSFE:sys_language_uid
 
+			pageId = TEXT
+			pageId.data = TSFE:id
 		}
 
 		settings {

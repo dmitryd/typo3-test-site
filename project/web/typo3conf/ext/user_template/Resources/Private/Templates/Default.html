@@ -3,16 +3,51 @@
 <f:layout name="skeleton"/>
 
 <f:section name="main">
-    <div class="col-md-8">
-        <div class="content-wrap">
-            <!--TYPO3SEARCH_begin-->
-            <v:content.render column="0"/>
-            <!--TYPO3SEARCH_end-->
-        </div>
-    </div>
-    <div class="col-md-4">
+    <div class="content-wrap">
         <!--TYPO3SEARCH_begin-->
-        <v:content.render column="2" slide="-1"/>
+        <v:variable.set name="content" value="{v:content.render(column: 0) -> v:format.trim()}"/>
+        <f:if condition="{content} == ''">
+            <f:then>
+                <div>
+                    <header>
+                        <h2>No content</h2>
+                    </header>
+                    <p>This page has no content in the TYPO3 Backend.</p>
+                </div>
+            </f:then>
+            <f:else><f:format.raw>{content}</f:format.raw></f:else>
+        </f:if>
         <!--TYPO3SEARCH_end-->
+        <hr/>
+        <p>
+            <h4>Sample links to this page ("{data.title}")</h4>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>URL</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Valilla page url</td>
+                    <td><f:link.page pageUid="{pageId}"><f:uri.page pageUid="{pageId}" absolute="1"/></f:link.page></td>
+                </tr>
+                <tr>
+                    <v:variable.set name="altLanguageId" value="0"/>
+                    <f:if condition="{languageId} == 0">
+                        <v:variable.set name="altLanguageId" value="1"/>
+                    </f:if>
+                    <td>&L={altLanguageId}</td>
+                    <td><f:link.page pageUid="{pageId}" additionalParams="{L: altLanguageId}"><f:uri.page pageUid="{pageId}" absolute="1"  additionalParams="{L: altLanguageId}"/></f:link.page></td>
+                </tr>
+                    <td>&type=99</td>
+                    <td><f:link.page pageUid="{pageId}" pageType="99"><f:uri.page pageUid="{pageId}" pageType="99" absolute="1"/></f:link.page></d>
+                </tr>
+                <tr>
+                    <td>&gclid=12345</td>
+                    <td><f:link.page pageUid="{pageId}" additionalParams="{gclid: 12345}"><f:uri.page pageUid="{pageId}" additionalParams="{gclid: 12345}" absolute="1"/></f:link.page></td>
+                </tr>
+            </table>
+        </p>
     </div>
 </f:section>

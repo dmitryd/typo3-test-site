@@ -1,0 +1,36 @@
+body {
+    margin: 25px 0;
+}
+
+/* Side nav */
+
+nav a {
+    border-bottom: 1px solid silver;
+}
+
+nav > ul.nav > li > a {
+    background: #337ab7;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+    nav > ul.nav > li > a:hover {
+        color: #337ab7;
+    }
+
+nav .active > a {
+    font-weight: bold;
+}
+
+nav .level2 a {
+    padding-left: 25px;
+}
+
+nav .level3 a {
+    padding-left: 40px;
+}
+
+/* Headers */
+.content-wrap > div > header > h2 {
+    margin-top: 0;
+}
