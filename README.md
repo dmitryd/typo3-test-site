@@ -30,4 +30,10 @@ This branch uses TYPO3 7.6 LTS.
   * `project/web/typo3` to `/var/www/html/vendor/typo3/cms/typo3`
   * `project/web/index.php` to `/var/www/html/vendor/typo3/cms/index.php`
 
+## Contribution notes
+
+If you want to make changes and submit them for integration, you probably need to make them in all supported branches. Some files are specific to the TYPO3 version (like PHP configuration or database dump). Have a look to `.gitattributes` file. You need to run `git config --global merge.ours.driver true` from shell to make proper merges in such cases.
+
+## Other
+
 Questions? You can find me in the realurl channel of the TYPO3 Slack group.
