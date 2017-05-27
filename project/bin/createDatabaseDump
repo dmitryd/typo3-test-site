@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+DIRNAME=`dirname $0`/../backup
+
+[ ! -d $DIRNAME ] && mkdir $DIRNAME
+
+FILENAME=$DIRNAME/typo3dev.sql
+
+mysqldump --opt --single-transaction -d -u typo3dev -ptypo3dev -h 127.0.0.1 -P 3306 typo3dev > $FILENAME
+mysqldump --opt --single-transaction -t -u typo3dev -ptypo3dev -h 127.0.0.1 -P 3306 \
+    --ignore-table=typo3dev.be_sessions \
+    --ignore-table=typo3dev.cache_md5params \
+    --ignore-table=typo3dev.cache_treelist \
+    --ignore-table=typo3dev.cf_cache_hash \
+    --ignore-table=typo3dev.cf_cache_hash_tags \
+    --ignore-table=typo3dev.cf_cache_imagesizes \
+    --ignore-table=typo3dev.cf_cache_imagesizes_tags \
+    --ignore-table=typo3dev.cf_cache_pages \
+    --ignore-table=typo3dev.cf_cache_pages_tags \
+    --ignore-table=typo3dev.cf_cache_pagesection \
+    --ignore-table=typo3dev.cf_cache_pagesection_tags \
+    --ignore-table=typo3dev.cf_cache_rootline \
+    --ignore-table=typo3dev.cf_cache_rootline_tags \
+    --ignore-table=typo3dev.cf_extbase_datamapfactory_datamap \
+    --ignore-table=typo3dev.cf_extbase_datamapfactory_datamap_tags \
+    --ignore-table=typo3dev.cf_extbase_object \
+    --ignore-table=typo3dev.cf_extbase_object_tags \
+    --ignore-table=typo3dev.cf_extbase_reflection \
+    --ignore-table=typo3dev.cf_extbase_reflection_tags \
+    --ignore-table=typo3dev.cf_vhs_main \
+    --ignore-table=typo3dev.cf_vhs_main_tags \
+    --ignore-table=typo3dev.cf_vhs_markdown \
+    --ignore-table=typo3dev.cf_vhs_markdown_tags \
+    --ignore-table=typo3dev.fe_sessions \
+    --ignore-table=typo3dev.sys_history \
+    --ignore-table=typo3dev.sys_locked_records \
+    --ignore-table=typo3dev.tx_rsaauth_keys \
+    --ignore-table=typo3dev.sys_log \
+    typo3dev >> $FILENAME
