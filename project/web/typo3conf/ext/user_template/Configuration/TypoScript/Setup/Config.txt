@@ -18,6 +18,8 @@ config {
 
     admPanel = 0
     contentObjectExceptionHandler = 0
+
+    no_cache = 1
 }
 
 
