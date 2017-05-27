@@ -14,3 +14,5 @@ $cacheConfigurations['extbase_reflection']['backend'] = 'TYPO3\CMS\Core\Cache\Ba
 $cacheConfigurations['extbase_typo3dbbackend_queries']['backend'] = 'TYPO3\CMS\Core\Cache\Backend\NullBackend';
 $cacheConfigurations['extbase_typo3dbbackend_tablecolumns']['backend'] = 'TYPO3\CMS\Core\Cache\Backend\NullBackend';
 $cacheConfigurations['l10n']['backend'] = 'TYPO3\CMS\Core\Cache\Backend\NullBackend';
+
+$GLOBALS['TYPO3_CONF_VARS']['FE']['cHashExcludedParameters'] .= ', gclid';
