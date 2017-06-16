@@ -37,14 +37,14 @@
                     <f:if condition="{languageId} == 0">
                         <v:variable.set name="altLanguageId" value="1"/>
                     </f:if>
-                    <td>&L={altLanguageId}</td>
+                    <td>&amp;L={altLanguageId}</td>
                     <td><f:link.page pageUid="{pageId}" additionalParams="{L: altLanguageId}"><f:uri.page pageUid="{pageId}" absolute="1"  additionalParams="{L: altLanguageId}"/></f:link.page></td>
                 </tr>
-                    <td>&type=99</td>
+                    <td>&amp;type=99</td>
                     <td><f:link.page pageUid="{pageId}" pageType="99"><f:uri.page pageUid="{pageId}" pageType="99" absolute="1"/></f:link.page></d>
                 </tr>
                 <tr>
-                    <td>&gclid=12345</td>
+                    <td>&amp;gclid=12345</td>
                     <td><f:link.page pageUid="{pageId}" additionalParams="{gclid: 12345}"><f:uri.page pageUid="{pageId}" additionalParams="{gclid: 12345}" absolute="1"/></f:link.page></td>
                 </tr>
             </table>
