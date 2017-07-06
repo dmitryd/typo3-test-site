@@ -5,6 +5,7 @@ project/web/index.php
 project/web/typo3
 project/web/fileadmin/
 project/web/typo3conf/ext/*
+project/web/typo3conf/ENABLE_INSTALL_TOOL
 project/web/typo3temp/
 project/web/uploads/
 
