@@ -16,3 +16,13 @@ $cacheConfigurations['extbase_typo3dbbackend_tablecolumns']['backend'] = 'TYPO3\
 $cacheConfigurations['l10n']['backend'] = 'TYPO3\CMS\Core\Cache\Backend\NullBackend';
 
 $GLOBALS['TYPO3_CONF_VARS']['FE']['cHashExcludedParameters'] .= ', gclid';
+
+$GLOBALS['TYPO3_CONF_VARS']['LOG']['DmitryDulepov']['Realurl'] = array(
+	'writerConfiguration' => array(
+		\TYPO3\CMS\Core\Log\LogLevel::NOTICE => array(
+			\TYPO3\CMS\Core\Log\Writer\FileWriter::class => array(
+				'logFile' => 'typo3temp/logs/tx_realurl_' . date('Ymd') . '.log'
+			)
+		)
+	)
+);
