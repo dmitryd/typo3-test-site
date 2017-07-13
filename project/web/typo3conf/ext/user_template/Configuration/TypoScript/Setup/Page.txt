@@ -61,6 +61,9 @@ page {
 
 			pageId = TEXT
 			pageId.data = TSFE:id
+
+			rootPid = TEXT
+			rootPid.data = leveluid:0
 		}
 
 		settings {
@@ -75,4 +78,12 @@ page {
             backendLayout.data = register:backendLayout
 		}
     }
+}
+
+rss = PAGE
+rss {
+	typeNum = 999
+
+	10 = TEXT
+	10.value = You see the RSS version of the page!
 }
