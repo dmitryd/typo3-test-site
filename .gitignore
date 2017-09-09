@@ -4,6 +4,7 @@ project/vendor/
 project/web/index.php
 project/web/typo3
 project/web/fileadmin/
+project/web/typo3conf/autoload/
 project/web/typo3conf/ext/*
 project/web/typo3temp/
 project/web/uploads/
