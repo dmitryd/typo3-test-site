@@ -57,7 +57,11 @@ page {
 
 		variables {
 			languageId = TEXT
-			languageId.data = TSFE:sys_language_uid
+			languageId {
+				data = GP:L
+				ifEmpty = 0
+				intval = 1
+			}
 
 			pageId = TEXT
 			pageId.data = TSFE:id
