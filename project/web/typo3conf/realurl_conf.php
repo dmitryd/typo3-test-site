@@ -8,6 +8,7 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array(
                     'en' => 0,
                     'ru' => 1,
                 ),
+				'noMatch' => 'bypass',
             ),
         ),
         'pagePath' => array(
