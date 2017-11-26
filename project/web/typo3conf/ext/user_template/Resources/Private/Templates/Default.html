@@ -33,12 +33,16 @@
                     <td><f:link.page pageUid="{pageId}"><f:uri.page pageUid="{pageId}" absolute="1"/></f:link.page></td>
                 </tr>
                 <tr>
+                    <td>Empty "L"</td>
+                    <td><f:link.page pageUid="{pageId}" additionalParams="{L: ''}"><f:uri.page pageUid="{pageId}" additionalParams="{L: ''}" absolute="1"/></f:link.page></td>
+                </tr>
+                <tr>
                     <v:variable.set name="altLanguageId" value="0"/>
                     <f:if condition="{languageId} == 0">
                         <v:variable.set name="altLanguageId" value="1"/>
                     </f:if>
-                    <td>&amp;L={altLanguageId}</td>
-                    <td><f:link.page pageUid="{pageId}" additionalParams="{L: altLanguageId}"><f:uri.page pageUid="{pageId}" absolute="1"  additionalParams="{L: altLanguageId}"/></f:link.page></td>
+                    <td>&amp;L={altLanguageId + 0}</td>
+                    <td><f:link.page pageUid="{pageId}" additionalParams="{L: '{altLanguageId}'}"><f:uri.page pageUid="{pageId}" absolute="1"  additionalParams="{L: '{altLanguageId}'}"/></f:link.page></td>
                 </tr>
                     <td>&amp;type=99</td>
                     <td><f:link.page pageUid="{pageId}" pageType="99"><f:uri.page pageUid="{pageId}" pageType="99" absolute="1"/></f:link.page></d>

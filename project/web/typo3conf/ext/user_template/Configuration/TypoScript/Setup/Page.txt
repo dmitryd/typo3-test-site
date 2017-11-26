@@ -59,8 +59,10 @@ page {
 			languageId = TEXT
 			languageId {
 				data = GP:L
-				ifEmpty = 0
-				intval = 1
+				ifEmpty {
+					cObject = TEXT
+					cObject.value = 0
+				}
 			}
 
 			pageId = TEXT
